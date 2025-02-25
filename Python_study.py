@@ -13,7 +13,7 @@ quantity = 3 # integer          quantity = 3.5 is technically an integer.
 
 print(f"You are {age} years old.")
 
-
+# Floats
 weight = 70
 height = 1.75   # float
 is_student = True  # boolean
