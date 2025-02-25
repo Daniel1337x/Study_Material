@@ -26,10 +26,11 @@ print(f"Hello {first_name}")                            # f means format
 print(f"You like {food}")
 print(f"Your age is {age}")
 
-full_name = f"{first_name} {last_name}"
-greeting = f"Hello, {full_name}!"   # f-string formatting
+full_name = f"{first_name} {last_name}"  # f-string formatting
+greeting = "Hello, {full_name}!"   # f-string formatting
 
 
+print(f"Hello, {full_name}!")
 
 # Data Types
 # 1. Text Type: str
