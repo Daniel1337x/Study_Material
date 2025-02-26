@@ -22,6 +22,9 @@ food = "pizza"  # string
 
 
 # print f-string examples - all strings inside curly braces are evaluated as expressions
+#expression = a combination of values, variables, and operators that evaluate to a single value
+#expression = 1 + 2
+
 print(f"Hello {first_name}")                            # f means format
 print(f"You like {food}")
 print(f"Your age is {age}")
@@ -40,4 +43,68 @@ print(f"Hello, {full_name}!")
 # 5. Set Types: set, frozenset
 # 6. Boolean Type: bool
 # 7. Binary Types: bytes, bytearray, memoryview
+# 7. Expression: expression is a combination of values, variables, and operators that evaluate to a single value.
+# 8. Variable: A container that stores data values. (string, integer, float, boolean, list, tuple, dictionary, set)
 
+# An expression is a combination of operators and operands that is interpreted to produce some other value. 
+# In any programming language, an expression is evaluated as per the precedence of its operators. 
+# So that if there is more than one operator in an expression, their precedence decides which operation will be performed first. 
+# We have many different types of expressions in Python.
+
+# 1. Constant Expressions: These are the expressions that have constant values only.
+# Constant Expressions 
+x = 15 + 1.3
+  
+print(x)
+
+ 
+
+# 2. Arithmetic Expressions: An arithmetic expression is a combination of numeric values, operators, and sometimes parenthesis. 
+# The result of this type of expression is also a numeric value. The operators used in these expressions are arithmetic operators like addition, subtraction, etc.
+
+
+# Arithmetic Expressions 
+x = 40
+y = 12
+  
+add = x + y 
+sub = x - y 
+pro = x * y 
+div = x / y 
+  
+print(add) 
+print(sub) 
+print(pro) 
+print(div)
+
+
+### Print examples ###
+
+
+
+# Quick summary.
+
+    print(f“hello, {name}”)
+# f-strings are stylish, modern, extremely fast, powerful and have absolutely no relation to the print function. You can do result = f“hello, {name}”. Between braces you can put any expression, function calls, list comprehension, etc.
+
+
+    print(“hello,” , name)
+# Slow. Relies on the print statement for "kind of" concatenating the output. Always adds a space between arguments.
+
+
+    print(“hello,” + name)
+# String concatenation. Very slow. name must be a string. Not related to the print statement.
+
+
+# Syntactic sugar. Doesn't really matter. Use whatever you like. The f-string is the most modern and powerful way to format strings in Python. The other two are just there for historical reasons.
+
+print(f"{one}{two}{three}{four}")
+
+versus
+
+print("{}{}{}{}".format(
+  one,
+  two,
+  three,
+  four
+))
