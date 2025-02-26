@@ -108,3 +108,30 @@ print("{}{}{}{}".format(
   three,
   four
 ))
+
+### formating string literals examples ###
+ 
+>>> name = "Fred"
+>>> f"He said his name is {name}."
+"He said his name is Fred."
+
+>>> name = "Fred"
+>>> f"He said his name is {name!r}."
+"He said his name is Fred."
+
+>>> f"He said his name is {repr(name)}." # repr() is equivalent to !r
+"He said his name is Fred."
+
+>>> width = 10
+>>> precision = 4
+>>> value = decimal.Decimal("12.34567")
+>>> f"result: {value:{width}.{precision}}" # nested fields
+result: 12.35
+
+>>> today = datetime(year=2023, month=1, day=27)
+>>> f"{today:%B %d, %Y}" # using date format specifier
+January 27, 2023
+
+>>> number = 1024
+>>> f"{number:#0x}" # using integer format specifier
+0x400
