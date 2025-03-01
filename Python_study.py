@@ -7,18 +7,128 @@
 first_name = "John"  # string
 last_name = "Doe"  # string
 
-# Integers
+# Integers              # whole numbers if age = "30" is technically a string.
 age = 30  # integer
 quantity = 3 # integer          quantity = 3.5 is technically an integer.
 
 print(f"You are {age} years old.")
 
-# Floats
-weight = 70
+# Floats               # decimal numbers
+weight = 70.99
 height = 1.75   # float
 is_student = True  # boolean
 food = "pizza"  # string
 
+price = 10.99
+
+print(f"The price is ${price}.")
+
+# Booleans             # true or false
+is_student = True  # boolean
+is_adult = False  # boolean
+
+# Lists                # ordered collection of items enclosed in square brackets
+
+# Typecasting = The process of converting a variable from one data type to another.
+#               str() = string, int() = integer, float() = float, bool() = boolean
+
+name = "John Connor" # string
+age = 24 # integer
+gpa = 3.2   # float
+is_student = True # boolean
+
+# gpa to interger
+gpa = int(gpa)
+
+print(gpa) # 3 (not 3.2) 0.2 is truncated!
+
+# age to float
+age = float(age)
+
+print(age)  # 24.0
+
+# age to string
+age = str(age)
+
+print(age)  # "24"
+
+# name to boolean
+name = bool(name)
+
+print(name)  # True
+
+# input()    = A function that prompts the user to enter data.
+#              Returns the entered data as a string.
+
+name = input("What is your name? ")  # "John Connor"
+age = int(input("How old are you? "))  # "24"   The int() function converts the string to an integer.
+# or
+age = int(age)
+age = age + 1
+
+print(f "Hello, {name}!")
+print("Happy Birthday!")
+print(f"You are {age} years old.")
+
+### EXERCISES ###
+# Exercise 1 Rectangle Area Calc
+
+lenght = input("Enter the lenght:")
+width = input("Enter the width:")
+
+area = int(lenght) * int(width) # Typecasting the string to an integer # * is asteric (multiplier)
+
+print(f"The area is: {area}cm")
+
+# Exercise 2 Shopping Cart Program
+
+item = input("Enter the item you want to add to the cart: ")
+price = float(input("Enter the price of the item: "))
+quantity = int(input("Enter the quantity of the item: "))
+
+total = price * quantity
+
+print(f"Total price of {item} is: {total}")
+
+#### Arithmetic Operators ####
+# + = addition
+# - = subtraction
+# * = multiplication
+# / = division
+# % = modulus
+# ** = exponentiation
+# // = floor division
+
+friends = 0
+#friends = friends + 1
+#friends += 1  # augmented assignment operator
+
+print(friends)  # 1
+
+
+
+x = 3.14
+y = -4
+z = 5
+
+result = round(x)   # round() function rounds a number to the nearest integer
+print(result)  # 3
+
+result = abs(y)  # abs() function returns the absolute value of a number
+print(result)  # 4
+
+result = pow(4, 3)  # pow() function returns the power of a number
+print(result)  # 64
+
+max(x, y, z)  # max() function returns the largest of the given arguments)
+result = max(x, y, z)
+print(result)  # 5
+#or
+max(x, y, z)
+result = max(x, y, z)
+result = min(x, y, z)
+print(result)  # -4
+print(result)  # 5
 
 
 # print f-string examples - all strings inside curly braces are evaluated as expressions
