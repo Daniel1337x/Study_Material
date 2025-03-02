@@ -232,6 +232,19 @@ elif unit.upper() == "K":
 else:
     print(f"{unit} was not valid.")
 
+# Python temperature converter ### Exercise ###
+# Celsius to Fahrenheit
+unit = input("Is this temperature in Celsius (C) or Fahrenheit (F)? ")
+unit = input("Enter the temperature: ")
+if unit.upper() == "C":
+    unit = (unit * 9/5) + 32
+    print(f"The temperature is: {round(unit, 1)}F")
+elif unit.upper() == "F":
+    unit = (unit - 32) * 5/9
+    print(f"The temperature is: {round(unit, 1)}C")
+else:
+    print(f"{unit} was not valid.")
+
 
 
 # print f-string examples - all strings inside curly braces are evaluated as expressions
