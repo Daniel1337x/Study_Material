@@ -1,3 +1,5 @@
+
+import math
 # Variable = A container that stores data values. (string, integer, float, boolean, list, tuple, dictionary, set)
 #            A variable behaves as if it was the value it contains.
 #            A variable is created the moment you first assign a value to it.
@@ -125,10 +127,111 @@ result = max(x, y, z)
 print(result)  # 5
 #or
 max(x, y, z)
-result = max(x, y, z)
+result = max(x, y, z)       # max() function returns the largest of the given arguments)
 result = min(x, y, z)
-print(result)  # -4
+print(result)  # -4         # min() function returns the smallest of the given arguments)
 print(result)  # 5
+
+
+## added import math module to use math functions
+
+print(math.pi)  # 3.141592653589793 using math module
+print(math.e)  # 2.718281828459045 using math module, exponential constant
+
+
+# square root module    
+x = 9
+result = math.sqrt(x)  # sqrt() function returns the square root of x
+print(result)  # 3.0
+
+### math exercises ###
+# Exercise 1: Calculate the area of a circle
+
+radius = float(input("Enter the radius of the circle: "))
+
+circumference = 2 * math.pi * radius
+print(f"The circumference of the circle is: {circumference}")   # result is 31.415926535897
+or 
+print(f"The area of the circle is: {round(circumference)}")     # result is 31 (rounded)
+or
+print(f"The area of the circle is: {round(circumference, 2)}cm")  # result is 31.42 (rounded to 2 decimal places)
+
+
+# if = Do some code only IF some condition is True
+#      Else do something else
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are now signed up!")       # indentation is important in Python ( space at the start of the line)         
+elif  age < 0:
+    print("You havent been born yet!")
+elif age >= 100:
+    print("You are too old to sign up!")
+else:
+    print("You must be 18 years old to sign up!")
+
+response = input("Would you like to sign up? (yes/no): ")
+
+if response == "yes":           # = assignemnt operator, == comparison operator
+    print("Signing up...")
+else:
+    print("Goodbye!")
+
+
+name = input("Enter your name: ")
+
+if name == "":
+    print("You did not type in your name!")  # indentation error
+else:
+    print(f"Hello, {name}!")
+
+
+## Booleans in if statements ##
+online = True
+if online:
+    print("The user is online.")
+else:
+    print("The user is offline.")
+
+
+# Python calculator
+
+operator = input("Enter the operator (+, -, *, /): ")
+num1 = (input("Enter the first number: "))          # input() function returns a string  # num1 = 10 is an integer
+num2 = float(input("Enter the second number: "))    # num2 = 5.5 is a float ! we want to convert it to float
+print (num1 + num2)
+
+if operator == "+":
+    result = num1 + num2
+    print(f"Result: {round(result)}")               # round() function rounds a number to the nearest integer
+elif operator == "-":
+    result = num1 - num2
+    print(f"Result: {round(result, 3)}")            # round() function rounds a number to 3 decimal places
+elif operator == "*":
+    result = num1 * num2
+    print(f"Result: {round(result, 3)}")
+elif operator == "/":
+    result = num1 / num2
+    print(f"Result: {round(result, 3)}")
+else:
+    print(f"Invalid operator: {operator}")
+
+# Python weight converter ### Exercise ###
+
+weight = float(input("Enter your weight: "))
+unit = input("Enter the unit (L)bs or (K)g: ")
+if unit.upper() == "L":                             # .upper() function converts the string to uppercase
+    weight = weight * 2.205
+    unit = "Lbs."
+    print(f"Your weight is: {round(weight, 1)} {unit}")        # round() function rounds a number to 1 decimal places
+elif unit.upper() == "K":
+    weight = weight / 2.205
+    unit = "Kgs."
+    print(f"Your weight is: {round(weight, 1)} {unit}")        # round() function rounds a number to 1 decimal places
+else:
+    print(f"{unit} was not valid.")
+
 
 
 # print f-string examples - all strings inside curly braces are evaluated as expressions
