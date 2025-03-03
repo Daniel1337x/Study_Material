@@ -232,34 +232,45 @@ elif unit.upper() == "K":
 else:
     print(f"{unit} was not valid.")
 
+
 # Python temperature converter ### Exercise ###
 # Celsius to Fahrenheit
-unit = input("Is this temperature in Celsius (C) or Fahrenheit (F)? ")
-unit = input("Enter the temperature: ")
-if unit.upper() == "C":
-    unit = (unit * 9/5) + 32
-    print(f"The temperature is: {round(unit, 1)}F")
-elif unit.upper() == "F":
-    unit = (unit - 32) * 5/9
-    print(f"The temperature is: {round(unit, 1)}C")
-else:
-    print(f"{unit} was not valid.")
+temp = input("Enter the temperature: ")
+unit_value = input("Is this temperature in Celsius (C) or Fahrenheit (F)? ")
 
+if unit_value.upper() == "C":                                 # String
+    temp = float(temp) * 9/5 + 32                             # Typecasting the string to a float  
+    print(f"The temperature is: {round(temp, 1)}F")
+elif unit_value.upper() == "F":
+    temp = float(temp) - 32 * 5/9
+    print(f"The temperature is: {round(temp, 1)}C")
+else:
+    print(f"{temp} was not valid.")
 
 
 # print f-string examples - all strings inside curly braces are evaluated as expressions
 #expression = a combination of values, variables, and operators that evaluate to a single value
 #expression = 1 + 2
 
+
+
+first_name = "John"
+last_name = "Connor"
+food = "pizza"
+age = 25
+
 print(f"Hello {first_name}")                            # f means format
 print(f"You like {food}")
 print(f"Your age is {age}")
 
-full_name = f"{first_name} {last_name}"  # f-string formatting
-greeting = "Hello, {full_name}!"   # f-string formatting
+full_name = f"{first_name} {last_name}"                 # f-string formatting
+greeting = f"Hello, {full_name}!"                       # f-string formatting  !!!! f-string is important here.!
 
 
 print(f"Hello, {full_name}!")
+# or
+print(f"{greeting}")
+
 
 # Data Types
 # 1. Text Type: str
